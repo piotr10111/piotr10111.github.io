@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nirvana - Project</title>
+        <meta name="Projekt Nirvana" content="Website about Nirvana band">
+        <meta name="keywords" content="nirvana, fan, nirvana site">
+        <meta name="author" content="Piotr Michalski">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Neuton:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/modal.css">
+    </head>
+    <body>
+        <!-- Main container -->
+        <div id="wrapper">
+            <!-- Navigation -->
+            <header id="mainHeader" class="scrolled">
+                <div class="container">
+                    <div class="navbar">
+                        <div class="logo">
+                            <a href="index.html" title="Go back to homepage">
+                                <img 
+                                     src="obrazy/nirvana-logo-txt.png" 
+                                     alt="Nirvana - logo">
+                            </a>    
+                        </div>
+                            <button class="hamburger" title="Open menu" aria-label="navigation menu" aria-expanded="true"></button>
+                            <button class="hamburger-close" title="Close menu" aria-label="navigation menu" aria-expanded="true"></button>
+                        <div class="column">
+                            <nav>
+                                <div class="navigation">
+                                    <ul class="top-menu">
+                                        <li>
+                                            <a class="menu " href="index.html" title="Home">Home</a>
+                                        </li>
+                                         <li>
+                                            <a class="menu active" href="news.html" title="Info">Info</a>
+                                        </li>
+                                        <li>
+                                            <a class="menu" href="band.html" title="Band">Band</a>
+                                        </li>
+                                        <li>
+                                            <a class="menu" href="music.html" title="Music">Music</a>
+                                        </li>
+                                        <li>
+                                            <a class="menu" href="history.html" title="History">History</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </nav>    
+
+                            <div class="supp">
+                                <ul class="socials">
+                                    <li>
+                                        <a class="socialA" href="https://www.facebook.com/Nirvana/" target="_blank">
+                                            <span class="fa fa-facebook" aria-hidden="true"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="socialA" href="https://twitter.com/nirvana" target="_blank">
+                                            <span class="fa fa-twitter" aria-hidden="true"></span>
+                                        </a>
+                                    </li>
+                                     <li>
+                                        <a class="socialA" href="https://www.youtube.com/user/NirvanaVEVO/videos" target="_blank">
+                                            <span class="fa fa-youtube" aria-hidden="true"></span>
+                                        </a>
+                                    </li>
+                                </ul>    
+                                <div class="spot">
+                                    <a class="socialImg" href="https://play.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh?            play=true&utm_source=open.spotify.com&utm_medium=open" target="_blank">
+                                    <span>
+                                        <img src="obrazy/spotify-icon.png" alt="spotify icon">
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </header>
+          <main>
+              <!--Scroll Button-->
+                <div class="scrollTopBtn">
+                    <span class="fa fa-caret-up" aria-hidden="true"></span>
+                </div>
+              
+                <!--One page section-->
+                <div class="news-container">
+                                                    
+                    <div id="inline">
+                        <article>
+                            <div class="firstArticle">
+                                <!--Header above article-->
+                                <header class="headerOfArticles">
+                                    <h2>Read newest articles</h2>
+                                </header>
+                                <figure>
+                                    <img src="obrazy/article.png" alt="">
+                                </figure>
+                                <div id="middleArticle">
+                                    <div class="textOnArticle">
+                                        <a>
+                                            <time>27-07-2017</time>
+                                            <span>Read</span>
+                                        </a>    
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!--Form-->
+                    <div id="form">
+                        <article class="loginHeader">
+                            <h3>Fan mail</h3>
+                            <p>Send E-Mail Address to receive news about Nirvana and Rock'n Roll! </p>
+                        </article>
+                        <div class="newsForm">
+                            <form id="register" method="post">
+                                <div class="formLI">
+                                    <label for="elUsername">Name</label>
+                                    <input type="text" name="name" id="elUsername" placeholder="Name" >
+                                    <p class="elMsg"></p>
+                                </div>
+                                <div class="formLI toTop">
+                                    <label for="newsEmail">E-Mail</label>
+                                    <input type="text" name="email" id="newsEmail" placeholder="E-Mail Address" >
+                                    <p class="msgEmail"></p>
+                                </div>
+                                <div class="formLI">
+                                    <button type="submit" id="submit" class="btn btn-submit-news disable" >Send</button>
+                                    <p id="message"></p>
+                                </div>                                          
+
+                            </form>
+
+                            <!--Advertisement Spotify-->
+                            <aside class="addAside">
+                                <img width="350" class="spotifyLogoNews" src="obrazy/spotifyLogo.png" alt="Spotify logo">
+                                <p>
+                                    Listen with no limits favourite 
+                                    <span><a href="https://en.wikipedia.org/wiki/Nirvana_(band)" target="_blank">Nirvana's</a></span> 
+                                    songs
+                                </p>
+                                <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:6olE6TJLqED3rqDCT0FyPh?                          play=true&utm_source=open.spotify.com&utm_medium=open&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+                            </aside>
+                        </div>
+                    </div>
+                    </div> 
+                    
+                    <!--<section id="articles">
+                        <header>
+                            <h2>News</h2>
+                        </header>
+                        <div class="flex">
+                            <figure class="photo">
+                                <img src="obrazy/news-guitar.jpg"
+                                     alt="Guitar">
+                            </figure>
+                        </div>
+                        <div class="flex">
+                            <figure class="photo">
+                                <img src="obrazy/news-guitar2.jpg"
+                                     alt="Guitar">
+                            </figure></div>
+                        <div class="flex">
+                            <figure class="photo">
+                                <img src="obrazy/news-guitar.jpg"
+                                     alt="Guitar">
+                            </figure>
+                        </div>
+                        <div class="flex">
+                            <figure class="photo">
+                                <img src="obrazy/news-guitar2.jpg"
+                                     alt="Guitar">
+                            </figure>
+                        </div>
+                        <div class="flex">
+                            <figure class="photo">
+                                <img src="obrazy/news-guitar.jpg"
+                                     alt="Guitar">
+                            </figure>
+                        </div>
+                        <div class="flex">
+                            <figure class="photo">
+                                <img src="obrazy/news-guitar2.jpg"
+                                     alt="Guitar">
+                            </figure>
+                        </div>
+                        <div class="flex">
+                            <figure class="photo">
+                                <img src="obrazy/news-guitar.jpg"
+                                     alt="Guitar">
+                            </figure>
+                        </div>
+                        <div class="flex">
+                            <figure class="photo">
+                                <img src="obrazy/news-guitar2.jpg"
+                                     alt="Guitar">
+                            </figure>
+                        </div>
+                        <div class="flex">
+                            <figure class="photo">
+                                <img src="obrazy/news-guitar.jpg"
+                                     alt="Guitar">
+                            </figure>
+                        </div>
+                        <div class="flex">
+                            <figure class="photo">
+                                <img src="obrazy/news-guitar2.jpg"
+                                     alt="Guitar">
+                            </figure>
+                        </div>
+                        <div class="flex">
+                            <figure class="photo">
+                                <img src="obrazy/news-guitar.jpg"
+                                     alt="Guitar">
+                            </figure>
+                        </div>
+                        <div class="flex">
+                            <figure class="photo">
+                                <img src="obrazy/news-guitar2.jpg"
+                                     alt="Guitar">
+                            </figure>
+                        </div>
+                    </section>-->
+                    <section id="modalWrpr">
+                        <header class="articleModal">
+                            <h2>See previews of Kurt Cobain’s art from an upcoming exhibition</h2>
+                        </header>
+                        <article class="txtModal">
+                            <h3>A new exhibition of Kurt Cobain‘s art is set to take place in Seattle this weekend.</h3>
+
+                            <p>The Seattle Art Fair will play host to a range of original art by Kurt Cobain from today (August 3) to August 6. Amongst them, never-before-seen paintings by Cobain will be exhibited alongside a number of drawings and journal extracts.</p>
+
+                            <p>One of the paintings features a hollow body, poppies and a baby with a broken head, and became the original artwork for 1992’s ‘Incesticide‘, Nirvana‘s b-side album. A series of comics, sketches and other works will also feature, including one of Iron Maiden‘s mascot Eddie, as well as the painting which would go on to be the cover for 2015’s soundtrack album ‘Montage Of Heck: The Home Recordings’.</p>
+
+                        </article>
+                        <footer class="footerModal">
+                            <p>
+                                <a href="https://goo.gl/otkavf" target="_blank">Source: https://goo.gl/otkavf</a>
+                            </p>    
+                        </footer>
+                    </section>
+                </div>
+             </main> 
+            <footer>
+                <div class="footer-container">
+                    <ul class="footer-socials-icons">
+                        <li>
+                            <a href="https://www.facebook.com/Nirvana/" target="_blank">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/nirvana" target="_blank">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/user/NirvanaVEVO/videos" target="_blank">
+                                <i class="fa fa-youtube" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-name">
+                        <p>
+                            Piotr Michalski 
+                            <span id="dateElement"></span>
+                        </p>
+                    </div>
+                </div>
+             </footer>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/modal-init.js"></script>
+        <script src="js/modal-window.js"></script>
+    </body>
+</html>

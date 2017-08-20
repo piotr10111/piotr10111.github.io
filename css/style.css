@@ -1,0 +1,2435 @@
+/*--------------------
+1. HEADER & NAV
+----------------------*/
+html{
+    font-family: 'Neuton', serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box
+            box-sizing: border-box;
+    overflow-x: hidden;
+}
+#wrapper{
+    width: 100vw;
+    height: 100vh;
+}
+#mainHeader{
+    width: 100%;
+    height: 100px;
+    background-color: #000000;
+    position: fixed;
+    z-index: 500;
+    -webkit-transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	-ms-transition: all 0.1s;
+	-o-transition: all 0.1s;
+	transition: all 0.1s;
+}
+.navbar{
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: center;
+}
+.column{
+    display: flex;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+}
+.top-menu{
+    display: flex;
+    padding: 20px;
+    margin-top: 40px;
+    height: 50px;
+    margin-left: 35%;
+}
+.top-menu li{
+    margin-left: 20px;
+}
+.top-menu a{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-decoration: none;
+    padding-right: 35px;
+}
+.top-menu a:hover{
+    color: #CC8500;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.active{
+    color: #CC8500;
+}
+.socials{
+    display: flex;
+    padding-right: 10px;
+    height: 35px;
+}
+.supp{
+    display: flex;
+    margin-top: 15px;
+}
+.socials li{
+    height: 35px;
+    padding-right: 5px;
+}
+.socials a{
+    padding-right: 10px;
+}
+.socialA{
+    display: block;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #CC8500;
+    border-radius: 50%;
+    margin-left: 5px;
+    background: #CC8500;
+    padding: 10px;
+    opacity: 0.9;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.socialA:hover{
+    background: #fff;
+    border-color: #fff;
+}
+.socials  span{
+    margin-top: -5px;
+    margin-left: -2px;
+    font-size: 23px;
+    color: #000;
+}
+.fa-facebook{
+    padding-left: 2px;
+}
+.spot{
+    margin-left: -5px;
+    height: 35px;
+}
+
+.scrollTopBtn{
+    width: 35px;
+    height: 35px;
+    background: #CC8500;
+    border-radius: 50%;
+    position: fixed;
+    top: 87%;
+    left: 95%;
+    z-index: 900;
+    cursor: pointer;
+}
+.scrollTopBtn:hover::before{
+    content: 'Back To Top';
+    font-size: 22px;
+    font-family: 'Kurale', serif;
+    color: #FFFFFF;
+    font-weight: 600;
+    position: absolute;
+    top: 15%;
+    left: -340%;
+}
+.scrollTopBtn span{
+    color: #0d0d0d;
+    font-size: 40px;
+    position: absolute;
+    top: -12%;
+    left: 19%;
+}
+
+.logo img{
+    z-index: 5;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+    margin-top: 10px;
+}
+#mainHeader.smaller{
+    height: 55px;
+    opacity: 0.9;
+    border-bottom: 1px solid  #4d4d4d;
+}
+#mainHeader.smaller .navbar{
+    margin-right: 19%;
+}
+#mainHeader.smaller .logo img{
+    width: 160px;
+	margin: 0;
+}
+#mainHeader.smaller .supp {
+	display: none;
+}
+#mainHeader.smaller .top-menu{
+    margin-left: 50%;
+}
+#mainHeader.smaller .top-menu li{
+    margin-top: -43px;
+}
+/*Hamburger / Socials*/
+.hamburger{
+    width: 40px;
+    height: 35px;
+    border: 0;
+    border-top: 3px solid #CC8500;
+    background: transparent;
+    position: absolute;
+    transition: 0.3s transform linear;
+    top: 13px;
+    right: 3%;
+    z-index: 900;
+    cursor: pointer;
+    border-radius: 1px;
+    display: none;
+}
+.hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 3px solid #CC8500;
+    transform: translateY(7px);
+}
+
+.hamburger::after {
+    transform: translateY(17px);
+    transition: 0.3s transform linear;
+}
+.hamburger-close{
+    display: none;
+    width: 37px;
+    height: 23px;
+    position: absolute;
+    border: none;
+    top: 25px;
+    right: 3%;
+    background: transparent;
+    border-radius: 4%;
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+.hamburger-close::before, .hamburger-close::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 3px solid #cc8500;
+    transform: translateY(0px);
+    border-radius: 4%;
+}
+.hamburger-close::after{
+    transform: translateY(10px);
+    transform: rotate(-90deg);
+}
+/*--------------------
+3. SLIDER
+----------------------*/
+.slider{
+    height: 1100px;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background: url(../obrazy/slajd3.jpg);
+    background-attachment: fixed;
+    -webkit-background-size: cover;  
+    -moz-background-size: cover;     
+    -ms-background-size: cover;      
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*.slider figure img {
+	width: 20%;
+    height: 100vh;
+	float: left;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none;      
+    user-select: none;
+    opacity: 0.9;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+.slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	text-align: left;
+	font-size: 0;
+	-webkit-animation: 25s slider infinite;
+	        animation: 25s slider infinite; 
+}
+
+@-webkit-keyframes slider {
+
+0% {
+	left: 0;
+}
+
+20% {
+	left: 0;
+}
+
+25% {
+	left: -100%;
+}
+
+45% {
+    left: -100%;
+
+}
+
+50% {
+   left: -200%;
+
+}
+
+70% {
+	left: -200%;
+}
+
+75% {
+	left: -300%;
+}
+
+95% {
+	left: -300%;
+}
+
+100% {
+	left: -400%;
+
+}
+
+}
+@keyframes slider {
+
+0% {
+	left: 0;
+}
+
+20% {
+	left: 0;
+}
+
+25% {
+	left: -100%;
+}
+
+45% {
+    left: -100%;
+
+}
+
+50% {
+   left: -200%;
+
+}
+
+70% {
+	left: -200%;
+}
+
+75% {
+	left: -300%;
+}
+
+95% {
+	left: -300%;
+}
+
+100% {
+	left: -400%;
+
+}
+
+}
+/*--------------------
+4. LAST CREATION SECTION
+----------------------*/
+.container-band{
+    width: 100%;
+    height: 650px;
+    background-image: url(../obrazy/gt.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 0;
+}
+.header-txt h2{
+    font-family: 'Kurale', serif;
+    font-size: 55px;
+    text-align: center;
+    color: #CC8500;
+    text-transform: uppercase;
+    padding-top: 30px;
+}
+.photos-buttons-container{
+    margin: 30px 50px;
+    display: flex;
+    justify-content: center;
+    
+}
+.photos-buttons-container .content img{
+    transform: scale(.8);
+}
+.photos-buttons-container .content figcaption{
+    color: #FFFFFF;
+    font-size: 23px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.content{
+    position: relative;
+    margin: 0 auto;
+}
+.content img{
+    opacity: 1;
+    height: 400px;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border: 2px solid #404040;
+}
+.content:hover img{
+    -webkit-filter: brightness(0.6);
+            filter: brightness(0.6)
+}
+.content:hover .middle{
+    opacity: 1;
+}
+.middle{
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -20%);
+  -ms-transform: translate(-50%, -50%)
+}
+.text{
+    font-size: 21px;
+    color: #FFFFFF;
+    padding: 4px 7px 7px 7px;
+    text-transform: uppercase;
+}
+.text:hover{
+    cursor: pointer;
+}
+.text a{
+    text-decoration: none;
+    color: #fff;
+}
+.line-bottom{
+    height: 2px;
+    background-color: #fff;
+    width: 0%;
+    color: #FFFFFF;
+    -webkit-transition: 0.4s all ease;
+    -o-transition: 0.4s all ease;
+    transition: 0.4s all ease;
+}
+.text:hover > .line-bottom {
+    background-color: #d9d9d9;
+    width: 100%;
+}
+.moreInfoBtn{
+    font-family: 'Neuton', serif;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #CC8500;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 35px;
+    margin-left: 32px;
+    box-sizing: border-box;
+}
+/*--------------------
+5. PARALLAX
+----------------------*/
+.parallax{
+    height: 800px;
+}
+.pictOne{
+    width: 100%;
+    height: 100%;
+    background: url(../obrazy/parallaxOne.jpg) no-repeat center center;
+    background-size: cover;
+    /*background-size: 100% auto;*/
+    background-attachment: fixed;
+}
+/*--------------------
+6. MUSIC SECTION
+----------------------*/
+.main-music-container{
+    width: 100%;
+    height: 570px;
+    background-image: url(../obrazy/gt.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+}
+.header-music-txt h2{
+    font-family: 'Kurale', serif;
+    font-size: 55px;
+    text-align: center;
+    color: #CC8500;
+    text-transform: uppercase;
+    padding-top: 30px;
+}
+.albums{
+    margin: 30px 50px;
+    display: flex;
+    justify-content: center;
+}
+.albums .expand img{
+    transform: scale(0.9);
+    border: 2px solid #404040;
+}
+.albums figcaption{
+    font-family: 'Kurale', serif;
+    font-size: 26px;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+}
+.txtMusicButtons{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.txtMusicButtons a{
+    font-family: 'Kurale', serif;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    background: #cc8500;
+    margin: 5px;
+    padding: 3px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.txtMusicButtons a:hover{
+    background: #996300;
+}
+/*MORE MUSIC BTN*/
+
+.moreMusicBtn{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    color: #cc8500;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+.moreMusicBtn a{
+    font-size: 24px;
+    color: #CC8500;
+}
+.moreMusicBtn span{
+    font-size: 35px;
+    margin-left: 5px;
+    line-height: 30px;
+}
+.down{
+    display: flex;
+    justify-content: space-around;
+}
+/*--------------------
+7. SECOND PARALLAX
+----------------------*/
+.parallaxTwo{
+    /*max-width: 100%;*/
+    height: 800px;
+}
+.pictTwo{
+    width: 100%;
+    height: 100%;
+    background: url(../obrazy/parallaxTwo.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*--------------------
+8. FOOTER
+----------------------*/
+.footer-container{
+    height: 130px;
+    background-color: #000;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+.footer-socials-icons{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 30px;
+}
+.footer-socials-icons a{
+    font-size: 30px;
+    color: #cc8500;
+    margin-left: 20px;
+}
+.footer-name{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 15px;
+}
+#dateElement{
+    color: #fff;
+}
+
+/*--------------------
+ NEWS PAGE
+----------------------*/
+.news-container{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    background: url(../obrazy/nirvanaNews.jpg);
+    background-size: cover;
+}
+#inline{
+    display: flex;
+    justify-content: space-between;
+    width: 64%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+/*--------------------
+ 1. ARTICLE
+----------------------*/
+.firstArticle{
+    margin-top: 30%;
+    position: relative;
+}
+.headerOfArticles{
+    font-size: 2.4em;
+    font-weight: 600;
+    padding: 5px;
+    text-transform: uppercase;
+    transform: rotate(1deg);
+    background-color: rgba(0,0,0,0.7);
+    color: #FFFFFF;
+    margin-bottom: 20%;
+    text-align: center;
+}
+.firstArticle img{
+    opacity: 1;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    transform: scale(1.1);
+    border: 1px solid #333333;
+    -webkit-box-shadow: 7px 6px 35px 1px rgba(255,255,255,1);
+-moz-box-shadow: 7px 6px 35px 1px rgba(255,255,255,1);
+box-shadow: 7px 6px 35px 1px rgba(255,255,255,1);
+    margin-left: 50px;
+}
+.firstArticle:hover img {
+    filter: brightness(.7);
+    
+}
+.firstArticle:hover #middleArticle {
+  opacity: 1;
+}
+#middleArticle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, 30%);
+    -ms-transform: translate(-60%, 0%);
+    cursor: pointer;
+}
+.textOnArticle {
+    color: #FFFFFF;
+    font-size: 30px;
+    padding: 16px 32px;
+    text-transform: uppercase;
+}
+.textOnArticle span{
+    margin-left: 28px;
+}
+/*--------------------
+ 2. FORM
+----------------------*/
+#form{
+    justify-content: flex-end;
+    width: 45%;
+}
+.newsForm{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 300px;
+    width: 550px;
+    /*background: rgba(0,0,0,0.9);*/
+    background: url(../obrazy/gt.PNG);
+    background-size: cover;
+    background-repeat: repeat;
+}
+.loginHeader{
+    color: #FFFFFF;
+    top: 8%;
+    right: 10%;
+    width: 530px;
+    background: rgba(0,0,0,0.9);
+    padding: 10px;
+}
+.loginHeader h3{
+    font-size: 3.5em;
+    color: #cc8500;
+    margin-left: 15px;
+    text-transform: uppercase;
+}
+.loginHeader p{
+    margin-left: 15px;
+    font-size: 22px;
+    text-align: center;
+}
+.newsForm form{
+    width: 200px;
+    padding: 10px;
+}
+.formLI{
+    padding: 15px;
+    color: #ffffff;
+    font-size: 20px;
+    width: 200px;
+}
+.formLI label{
+    font-family: 'Neuton', serif;
+    text-transform: none;
+    display: block;
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+.formLI input{
+    padding: 10px;
+    border: 1px solid #cc8500;
+}
+.formLI .btn{
+    font-family: 'Kurale', serif;
+    background: #cc8500;
+    padding: 10px;
+    border: none;
+    width: 60px;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.formLI .btn:hover{
+    background: #996300;
+    cursor: pointer;
+}
+.firstNewsImg{
+    height: 200px;
+}
+.elMsg{
+    font-family: 'Neuton', serif;
+    font-size: 15px;
+    color: #ff1a1a;
+    height: 11px;
+}
+.msgEmail{
+     font-family: 'Neuton', serif;
+    font-size: 15px;
+    color: #ff1a1a;
+    height: 11px;
+}
+#message{
+    box-sizing: border-box;
+    display: none;
+    z-index: 999;
+    height: 60px;
+    width: 400px;
+    background: #FFFFFF;
+    text-align: center;
+    border: 2px solid #ffffe6;
+    position: fixed;
+    top: 0;
+    left: 32%;
+    color: #000000;
+    font-family: 'Neuton', serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    border-radius: 2%;
+}
+
+.disable{
+    font-family: 'Kurale', serif;
+    background: #c68c53;
+    padding: 10px;
+    border: none;
+    width: 60px;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: default;
+}
+/*Addv in form(Spotify)*/
+.newsHeader{
+    padding: 30px;
+    font-size: 40px;
+    color: #FFFFFF;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 5%;
+}
+.addAside{
+    font-family: 'Arial', serif;
+    color: #FFFFFF;
+    width: 300px;
+    margin-left: 25px;
+    margin-right: 0;
+    padding-top: 15px;
+}
+.addAside h3{
+    font-size: 22px; 
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.addAside .spotifyLogoNews{
+    width: 250px;
+    padding-top: 10px;
+}
+.addAside p{
+    width: 270xp;
+    font-weight: 600;
+    line-height: 23px;
+    text-align: center;
+    margin-top: 10px;
+}
+.addAside p a{
+    color: #FFFFFF;
+}
+.addAside iframe{
+    margin: 20px 0 0 5px;
+}
+
+/*--------------------
+BAND PAGE
+----------------------*/
+#musicSct{
+    background: #0d0d0d;
+    max-width: 100%;
+    height: 700px;
+    text-transform: uppercase;
+    padding-top: 8%;
+    padding-bottom: 4%;
+}
+.musics{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-bottom:  30px;
+    width: 100%;
+}
+.bandHeader h1{
+    font-size: 55px; 
+    font-weight: 500;
+    color: #cc8500;
+    padding: 10px;
+    text-align: center;
+}
+.musics h2{
+    margin-top: 30px;
+    font-size: 30px;
+    color: #cc8500;
+}
+.musics h3{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+.musics h3 a{
+  color: #FFFFFF;
+}
+.musics a:hover{
+    color: #cccccc;
+}
+/*--------------------
+ MUSIC PAGE
+----------------------*/
+.albumContainer{
+    background-color: #0d0d0d;
+    text-transform: uppercase;
+}
+.albumsMusicPage{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.albumsMusicPage img{
+    transform: scale(0.8);
+    max-width: 100%;
+    border: 1px solid #404040;
+    -webkit-box-shadow: -33px 24px 41px -28px rgba(64,64,64,0.41);
+    -moz-box-shadow: -33px 24px 41px -28px rgba(64,64,64,0.41);
+    box-shadow: -33px 24px 41px -28px rgba(64,64,64,0.41);
+    margin-right: 10px;
+}
+.musicHeader h1{
+    font-size: 55px; 
+    font-weight: 500;
+    color: #cc8500;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center
+}
+.albumsMusicPage .figc{
+    font-family: 'Kurale', serif;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 26px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: -10px;
+}
+
+.albumsMusicPage .album4 .btnMusicContent{
+    padding-top: 1px;
+}
+.albumsMusicPage .album4 figcaption{
+    margin-top: -10px;
+}
+.albumsMusicPage .album6 .btnMusicContent{
+    padding-top: 10px;
+}
+.albumsMusicPage .album6 figcaption{
+    margin-top: -10px;
+    font-size: 21px;
+}
+.albumsMusicPage .album7 .btnMusicContent{
+    padding-top: 10px;
+}
+.albumsMusicPage .album7 figcaption{
+    margin-top: -10px;
+    font-size: 21px;
+}
+.albumsMusicPage .album8 .btnMusicContent{
+    padding-top: 20px;
+}
+.albumsMusicPage .album8 figcaption{
+    margin-top: -3px;
+}
+.albumsMusicPage .album9 .btnMusicContent{
+    padding-top: 18px;
+}
+.albumsMusicPage .album9 figcaption{
+    margin-top: 0px;
+}
+.albumsMusicPage .album10 .btnMusicContent{
+    padding-top: 21px;
+}
+.albumsMusicPage .album10 figcaption{
+    font-size: 24px;
+    margin-top: -2px;
+}
+
+.generalALbums{
+    margin-bottom: 30px;
+}
+.btnMusicContent{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+}
+.btnMusicContent a{
+    font-family: 'Kurale', serif;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    background: #cc8500;
+    margin: 5px;
+    padding: 3px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.btnMusicContent a:hover{
+    background: #996300;
+}
+.toEdit{
+    font-family: 'Kurale', serif;
+    display: block;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 307px;
+}
+/*--------------------
+ HISTORY PAGE
+----------------------*/
+#history{
+    width: 100%;
+    background-color: #0d0d0d;
+    padding-bottom: 30px;
+}
+.mainContent{
+    width: 80%;
+}
+.entry{
+    padding-top: 30px;
+}
+.hist-header-txt h1{
+    font-size: 54px; 
+    font-weight: 500;
+    color: #cc8500;
+    padding-top: 160px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.mainContent{
+    width: 65%;
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-family: 'Neutron', serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.mainContent article{
+    margin-top: 30px;
+}
+.mainContent article h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.responsive{
+    
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.responsive iframe{
+    margin: 0 auto;
+}
+#histFooter{
+    font-size: 15px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+#histFooter p a{
+    color: #FFFFFF;
+}
+#histFooter p a:hover{
+    color: #CCCCCC;
+}
+/*--------------------
+ MEDIA QUERIES
+----------------------*/
+@media (max-width: 1456px) and (min-width: 1400px){
+    .slider{
+        height: 900px;
+    }
+}
+@media (min-width: 1230px) and (max-width: 1400px) {
+    .column{
+        margin-left: -4%;
+    }
+    .top-menu a{
+        font-size: 23px;
+    }
+    .logo img{
+        width: 230px;
+    }
+    .slider{
+        height: 800px;
+    }
+    .container-band{
+        height: 550px;
+    }
+    .photos-buttons-container{
+        margin-top: -25px;
+    }
+    .header-txt h2{
+        font-size: 50px;
+        padding-top: 30px;
+    }
+    .photos-buttons-container .content img{
+        width: 320px;
+        height: 320px;
+        margin-top: 30px;
+    }
+    .photos-buttons-container .content figcaption{
+       margin-top: 10px;
+        font-size: 22px;
+    }
+    .moreInfoBtn{
+        margin-left: 15px;
+    }
+    .parallax{
+        height: 600px;
+    }
+    .parallaxTwo{
+        height: 600px;
+    }
+    .albums .expand img{
+        width: 270px;
+        height: 270px;
+    }
+    .albums .expand figcaption{
+        font-size: 24px;
+        margin-top: 10px;
+    }
+    .txtMusicButtons a{
+        font-size: 16px;
+    }
+    
+    #inline{
+        margin-top: 15%;
+    }
+    .headerOfArticles {
+        width: 300px;
+        padding: 2px;
+    }
+    .firstArticle img{
+        margin-left: -20%;
+    }
+    .headerOfArticles{
+        font-size: 34px;
+        margin-left: -10%;
+    }
+    .textOnArticle{
+        font-size: 26px;
+        width: 100%;
+        transform: translate(-40%, 30%);
+    }
+    #form{
+        margin-right: 8%;
+    }
+    
+    
+    #musicSct{
+        height: 720px;
+    }
+    
+    
+    .albumsMusicPage{
+        width: 80%;
+        justify-content: center;
+    }
+    .albumsMusicPage .figc{
+        font-size: 23px;
+    }
+    .albumsMusicPage .album4 .btnMusicContent{
+        padding-top: 13px;
+    }
+    .albumsMusicPage .album4 figcaption{
+        margin-top: -3px;
+    }
+    .albumsMusicPage .album8 .btnMusicContent{
+        padding-top: 13px;
+    }
+    .albumsMusicPage .album8 figcaption{
+        margin-top: -3px;
+    }
+    .albumsMusicPage .album9 .btnMusicContent{
+        padding-top: 18px;
+    }
+    .albumsMusicPage .album9 figcaption{
+        margin-top: 0px;
+    }
+    
+    
+      .mainContent{
+        width: 80%;
+    }
+    
+}
+
+@media (min-width: 1024px) and (max-width: 1229px){
+    #mainHeader.smaller .navbar{
+        margin-left: -6%;
+    }
+    .column{
+        margin-left: -10%;
+    }
+    .top-menu a{
+        font-size: 22px;
+    }
+    .logo img{
+        width: 230px;
+        padding-left: 0;
+    }
+    .slider{
+        height: 680px;
+    }
+    .container-band{
+        height: 520px;
+    }
+    .header-txt h2{
+        font-size: 55px;
+    }
+    .photos-buttons-container{
+        margin-left: 10px;
+    }
+    .photos-buttons-container .content img{
+       width: 300px;
+        height: 300px;
+        margin-top: -40px;
+        margin-left: 30px;
+    }
+    .animate1 img{
+        margin-left: 100px;
+    }
+    .animate2 img , .animate3 img{
+        margin-left: -120px;
+    }
+    .photos-buttons-container .content figcaption{
+        margin-top: 5px;
+        margin-left: 25px;
+        font-size: 21px;
+    }
+    .middle{
+        transform: translate(-30%,-90%);
+    }
+    .text a{
+        font-size: 18px;
+    }
+    .moreInfoBtn{
+        margin-left: 25px;
+        font-size: 21px;
+    }
+    .parallax{
+        height: 600px;
+    }
+    .parallaxTwo{
+        height: 600px;
+    }
+    .main-music-container{
+        height: 520px;
+    }
+    .header-music-txt h2{
+        font-size: 55px;
+    }
+    .albums{
+        margin-left: 15px;
+        margin-top: 55px;
+    }
+    .albums .expand img{
+        margin-top: -40px;
+        margin-left: 20px;
+        width: 230px;
+        height: 230px;
+    }
+    .albums .expand figcaption{
+        font-size: 21px;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .txtMusicButtons{
+        margin-left: 18px;
+    }
+    .txtMusicButtons a{
+        font-size: 15px;
+    }
+    .moreMusicBtn .expandMeBtn{
+        font-size: 23px;
+    }
+    .moreMusicBtn span{
+        font-size: 30px;
+        margin-left: 5px;
+        line-height: 30px;
+    }
+    
+    .news-container{
+        height: 1400px;
+        background-position: bottom center;
+    }
+    #inline{
+        flex-direction: column-reverse;
+        margin-left: 10%;
+    }
+    #form{
+        margin-top: 7%;
+        margin-left: 25%;
+        justify-content: center;
+    }
+    .firstArticle{
+        margin-top: -700px;
+        margin-left: 33%;
+    }
+    .headerOfArticles{
+        width: 400px;
+    }
+    .headerOfArticles  h2{
+        font-size: 33px;
+    }
+    #middleArticle{
+        transform: translate(-50%, 50%);
+    }
+  
+  
+    
+    
+    #musicSct{
+        height: 1150px;
+    }
+    .bandHeader{
+        margin-top: 120px;
+    }
+    
+    
+    .albumsMusicPage{
+        width: 100%;
+    }
+    .albumsMusicPage .figc{
+        font-size: 21px;
+        margin-top: -20px;
+    }
+    .albumsMusicPage img{
+        width: 305px;
+        height: 305px;
+    }
+    .albumsMusicPage .album4 .btnMusicContent{
+        padding-top: 18px;
+    }
+    .albumsMusicPage .album4 figcaption{
+        margin-top: -3px;
+    }
+    .albumsMusicPage .album8 .btnMusicContent{
+        padding-top: 18px;
+    }
+    .albumsMusicPage .album8 figcaption{
+        margin-top: -3px;
+    }
+    .albumsMusicPage .album9 .btnMusicContent{
+        padding-top: 18px;
+    }
+    .albumsMusicPage .album9 figcaption{
+        margin-top: 0px;
+    }
+    
+    
+      .mainContent{
+        width: 80%;
+    }
+        
+}
+
+@media (min-width: 800px) and (max-width: 1023px){
+    body{
+        width: 100%;
+    }
+    .hamburger{
+        display: block;
+    }
+    .logo img{
+        position: absolute;
+        top: 0px;
+        left: 2%;
+        width: 180px;
+    }
+    #mainHeader{
+        height: 50px;
+        border-bottom: 1px solid  #4d4d4d;
+        transition: .3s linear;
+        opacity: .9;
+    }
+    .column{
+        display: none;
+    }
+    #mainHeader.nav-open{
+        height: 100vh;
+        background-color: rgba(0,0,0,.9);
+        transition: .3s linear;
+        overflow-y: visible;
+    }
+    .nav-open .column{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20%;
+    }
+    .nav-open .logo img{
+        position: absolute;
+        top: 0px;
+        left: 2%;
+        width: 180px;
+        opacity: 0.2;
+        pointer-events: none;
+    }
+    .nav-open .top-menu{
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .nav-open .top-menu li{
+        padding-top: 25px;
+    }
+    .nav-open .top-menu a{
+        /*display: block;*/
+    }
+    .nav-open .supp{
+        margin-top: 55%;
+    }
+    .slider{
+        height: 520px;
+        background-position: center ;
+    }
+    .header-txt h2{
+        font-size: 50px;
+    }
+    .container-band{
+        height: 450px;
+    }
+    .photos-buttons-container{
+        margin-left: 30px;
+        margin-top: -60px;
+    }
+    .photos-buttons-container .content img{
+        /*transform: scale(.5);*/
+        width: 260px;
+        height: 260px;
+        margin-top: 60px;
+    }
+    .photos-buttons-container .content figcaption{
+        margin-top: 10px;
+        margin-left: 0px;
+        font-size: 18px;
+    }
+    .photos-buttons-container .content .middle{
+        transform: translate(-50%,40%);
+    }
+    .photos-buttons-container .content .middle .text{
+        font-size: 20px;
+    }
+    .moreInfoBtn{
+        font-size: 21px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .main-music-container{
+        height: 470px;
+    }
+    .main-music-container .albums{
+        margin-left: -220px;
+    }
+    .main-music-container .expand{
+        margin-right: -120px;
+        margin-top: -60px;
+    }
+    .main-music-container .expand img{
+        width: 170px;
+        height: 170px;
+        margin-left: 140px;
+        margin-top: 50px;
+    }
+    .main-music-container .expand figcaption{
+        font-size: 21px;
+        margin-top: 10px;
+        margin-left: 140px;
+    }
+    .main-music-container .expand .txtMusicButtons{
+        font-size: 12px;
+        margin-left: 140px;
+    }
+    .moreMusicBtn .expandMeBtn{
+        font-size: 21px;
+    }
+    .moreMusicBtn .expandMeBtn span{
+        font-size: 21px;
+    }
+    .parallax{
+        height: 520px;
+    }
+    .header-music-txt h2{
+        font-size: 50px;
+    }
+     .parallaxTwo{
+        height: 520px;
+    }
+    
+    
+    .news-container{
+        height: 1400px;
+        background-position: bottom center;
+    }
+    #inline{
+        flex-direction: column-reverse;
+        margin-left: 8%;
+    }
+    #form{
+        margin-top: 7%;
+        margin-left: 25%;
+        justify-content: center;
+    }
+    .firstArticle{
+        margin-top: -750px;
+        margin-left: 33%;
+    }
+    .firstArticle img{
+       width: 300px;
+    }
+    .headerOfArticles{
+        width: 400px;
+    }
+    .headerOfArticles  h2{
+        font-size: 30px;
+    }
+    #middleArticle{
+        transform: translate(-40%, 10%);
+        width: 200px;
+    }
+    .textOnArticle{
+        font-size: 24px;
+    }
+    .loginHeader h3{
+        font-size: 53px;
+    }
+    .loginHeader p{
+        font-size: 20px;
+        margin-left: -1px;
+    }
+    .formLI label{
+        font-size: 17px;
+    }
+    .addAside p{
+        font-size: 15px;
+    }
+    
+    
+    #musicSct{
+        height: 770px;
+    }
+    .bandHeader h1{
+        font-size: 50px;
+        padding-top: 50px;
+    }
+    .musics{
+        margin-top: 10%;
+    }
+    .musics h2{
+       font-size: 24px; 
+    }
+    .musics h3{
+       font-size: 17px; 
+    }
+  
+    
+    .musicHeader h1{
+        font-size: 50px;
+    }
+    .albumsMusicPage{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+    .albumsMusicPage img{
+        
+        width: 270px;
+        height: 270px;
+    }
+    .albumsMusicPage .figc{
+        font-size: 21px;
+        margin-left: -5px;
+        margin-top: -10px;
+    }
+    .albumsMusicPage .btnMusicSpotify a{
+        font-size: 14px;
+    }
+    .albumsMusicPage .btnMusicTunes a{
+        font-size: 14px;
+    }
+    
+    .albumsMusicPage .album4 figcaption{
+        margin-top: -10px;
+    }
+    .albumsMusicPage .album4 .btnMusicContent{
+        margin-top: 5px;
+    }
+    .albumsMusicPage .album6 figcaption{
+        margin-top: -10px;
+    }
+    .albumsMusicPage .album6 .btnMusicContent{
+        margin-top: -3px;
+    }
+    .albumsMusicPage .album8 figcaption{
+        margin-top: -10px;
+    }
+    .albumsMusicPage .album8 .btnMusicContent{
+        margin-top: 18px;
+    }
+    .albumsMusicPage .album10 figcaption{
+        margin-top: -2px;
+        font-size: 21px;
+    }
+    .albumsMusicPage .album10 .btnMusicContent{
+        margin-top: -15px;
+    }
+    
+  
+    
+    
+    #history{
+        padding-top: 2%;
+    }
+      .mainContent{
+        width: 90%;
+    }
+    .hist-header-txt h1{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 799px) and (min-width: 590px){
+    .scrollTopBtn{
+       margin-left: -10px;
+    }
+    /*.scrollTopBtn:hover::before{
+        content: 'Back To Top';
+        font-size: 22px;
+        font-family: 'Kurale', serif;
+        color: #FFFFFF;
+        background: #000000;
+        border-radius: 20%;
+        font-weight: 600;
+        position: absolute;
+        top: 110%;
+        left: -80%;
+        width: 120px;
+    }
+    .scrollTopBtn span{
+        left: 23%;
+        top: -5%;
+        font-size: 45px;
+    }*/
+    .hamburger{
+        display: block;
+    }
+    .logo img{
+        position: absolute;
+        top: 0px;
+        left: 2%;
+        width: 140px;
+    }
+    #mainHeader{
+        height: 50px;
+        border-bottom: 1px solid  #4d4d4d;
+        transition: .3s linear;
+        opacity: .9;
+    }
+    .column{
+        display: none;
+    }
+    #mainHeader.nav-open{
+        height: 100vh;
+        background-color: rgba(0,0,0,.9);
+        transition: .3s linear;
+        
+    }
+    .nav-open .column{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30%;
+    }
+    .nav-open .logo img{
+       position: absolute;
+        top: 0px;
+        left: 2%;
+        width: 140px;
+        opacity: 0.2;
+        pointer-events: none;
+    }
+    .nav-open .top-menu{
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: -40px;
+    }
+    .nav-open .top-menu li{
+        padding-top: 25px;
+    }
+    .nav-open .top-menu a{
+        /*display: block;*/
+    }
+    .nav-open .supp{
+        margin-top: 55%;
+    }
+    .slider{
+        height: 500px;
+        background-position: bottom;
+        background-size: cover;
+    }
+    .header-txt h2{
+        font-size: 50px;
+    }
+    .container-band{
+       height: 1250px;
+    }
+    .photos-buttons-container{
+        display: flex;
+        flex-direction: column;
+        margin-top: -30px;
+    }
+    .photos-buttons-container .content{
+        display: flex;
+        justify-content: center;
+    }
+    .photos-buttons-container .content img{
+        width: 320px;
+        height: 320px;
+    }
+    .photos-buttons-container .animate1{
+        margin-top: 30px;
+    }
+    .photos-buttons-container .content figcaption{
+        font-size: 19px;
+    }
+    .photos-buttons-container .content .text{
+        font-size: 18px;
+    }
+    .moreInfoBtn{
+        font-size: 24px;
+        justify-content: center;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    .main-music-container{
+        height: 820px;
+    }
+    .main-music-container .albums{
+        display: flex;
+        margin: 0;
+        max-width: 100%;
+        flex-wrap: wrap;
+        margin-top: -20px;
+        margin-left: 25px;
+    }
+    .main-music-container .expand img{
+        width: 230px;
+        height: 230px;
+        margin-right: 40px;
+        margin-top: 50px;
+    }
+    .main-music-container .expand figcaption{
+        font-size: 20px;
+        margin-top: -50px;
+    }
+    .main-music-container .expand .txtMusicButtons{
+        font-size: 15px;
+        margin-top: 50px;
+        margin-left: -38px;
+    }
+    .moreMusicBtn .expandMeBtn{
+        font-size: 24px;
+    }
+    .moreMusicBtn .expandMeBtn span{
+        font-size: 21px;
+    }
+    .parallax{
+        height: 520px;
+        background-position: center;
+    }
+    .header-music-txt h2{
+        font-size: 50px;
+    }
+     .parallaxTwo{
+        height: 520px;
+    }
+    
+    
+    .news-container{
+        height: 1200px;
+        background-position: bottom center;
+        width: 100%;
+    }
+    #inline{
+        flex-direction: column-reverse;
+        margin-left: -13%;
+    }
+    #form{
+        margin-top: 7%;
+        margin-left: 24%;
+        justify-content: center;
+    }
+    .firstArticle{
+        margin-top: -550px;
+        margin-left: 40%;
+    }
+    .firstArticle img{
+        margin-left: 100px;
+       width: 300px;
+       height: 300px;
+    }
+    .headerOfArticles{
+        width: 400px;
+    }
+    .headerOfArticles  h2{
+        font-size: 30px;
+    }
+    #middleArticle{
+        transform: translate(15%, 10%);
+        width: 200px;
+    }
+    .textOnArticle{
+        font-size: 24px;
+    }
+    .loginHeader h3{
+        font-size: 53px;
+    }
+    .loginHeader p{
+        font-size: 20px;
+        margin-left: -1px;
+    }
+    .formLI label{
+        font-size: 17px;
+    }
+    .addAside p{
+        font-size: 15px;
+    }
+    
+    
+    #musicSct{
+        height: 80vh;
+    }
+    .bandHeader h1{
+        font-size: 50px;
+        padding-top: 50px;
+    }
+    .musics{
+        margin-top: 10%;
+    }
+    .musics h2{
+        font-size: 24px; 
+    }
+    .musics h3{
+        font-size: 17px; 
+    }
+    
+    
+    #history{
+        padding-top: 2%;
+        
+    }
+    .mainContent{
+        width: 80%;
+    }
+    .hist-header-txt h1{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 589px) and (min-width: 390px){
+    .scrollTopBtn{
+       margin-left: -35px;
+    }
+    /*.scrollTopBtn:hover::before{
+        content: 'Back To Top';
+        font-size: 22px;
+        font-family: 'Kurale', serif;
+        color: #FFFFFF;
+        background: #000000;
+        border-radius: 20%;
+        font-weight: 600;
+        position: absolute;
+        top: 110%;
+        left: -80%;
+        width: 120px;
+    }
+    .scrollTopBtn span{
+        left: 23%;
+        top: -5%;
+        font-size: 45px;
+    }*/
+    .hamburger{
+        display: block;
+    }
+    .logo img{
+        position: absolute;
+        top: 0px;
+        left: 2%;
+        width: 140px;
+    }
+    #mainHeader{
+        height: 50px;
+        border-bottom: 1px solid  #4d4d4d;
+        transition: .3s linear;
+        opacity: .9;
+    }
+    .column{
+        display: none;
+    }
+    #mainHeader.nav-open{
+        height: 100vh;
+        background-color: rgba(0,0,0,.9);
+        transition: .3s linear;
+        overflow-y: visible;
+    }
+    .nav-open .column{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30%;
+    }
+    .nav-open .logo img{
+       position: absolute;
+        top: 0px;
+        left: 2%;
+        width: 140px;
+        opacity: 0.2;
+        pointer-events: none;
+    }
+    .nav-open .top-menu{
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .nav-open .top-menu li{
+        padding-top: 25px;
+    }
+    .nav-open .top-menu a{
+        /*display: block;*/
+    }
+    .nav-open .supp{
+        margin-top: 55%;
+    }
+    .slider{
+        height: 500px;
+        background-position: bottom;
+        background-size: cover;
+    }
+    .header-txt h2{
+        font-size: 40px;
+    }
+    .container-band{
+       height: 1150px;
+    }
+    .photos-buttons-container{
+        display: flex;
+        flex-direction: column;
+        margin-top: -30px;
+    }
+    .photos-buttons-container .content{
+        display: flex;
+        justify-content: center;
+    }
+    .photos-buttons-container .content img{
+        width: 290px;
+        height: 290px;
+    }
+    .photos-buttons-container .animate1{
+        margin-top: 30px;
+    }
+    .photos-buttons-container .content figcaption{
+        font-size: 19px;
+    }
+    .photos-buttons-container .content .text{
+        font-size: 18px;
+    }
+    .moreInfoBtn{
+        font-size: 21px;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .main-music-container{
+        height: 1450px;
+    }
+    .main-music-container .albums{
+        display: flex;
+        margin: 0;
+        max-width: 100%;
+        flex-wrap: wrap;
+        margin-top: -20px;
+        margin-left: 25px;
+    }
+    .main-music-container .expand img{
+        width: 230px;
+        height: 230px;
+        margin-right: 40px;
+        margin-top: 50px;
+    }
+    .main-music-container .expand figcaption{
+        font-size: 20px;
+        margin-top: -50px;
+    }
+    .main-music-container .expand .txtMusicButtons{
+        font-size: 14px;
+        margin-top: 50px;
+        margin-left: -38px;
+    }
+    .moreMusicBtn .expandMeBtn{
+        font-size: 24px;
+    }
+    .moreMusicBtn .expandMeBtn span{
+        font-size: 21px;
+    }
+    .parallax{
+        height: 520px;
+        background-position: center;
+    }
+    .header-music-txt h2{
+        font-size: 40px;
+    }
+     .parallaxTwo{
+        height: 520px;
+    }
+    .footer-name p{
+        font-size: 15px;
+    }
+    .footer-socials-icons li a{
+        font-size: 25px;
+    }
+    
+    
+    
+    .news-container{
+        height: 1300px;
+        width: 100%;
+    }
+    #inline{
+        flex-direction: column-reverse;
+        margin-left: 0;
+        width: 100%;
+        background: url(../obrazy/gt.PNG);
+        margin-top: 0;
+        padding-top: 70px;
+    }
+    .newsForm{
+        flex-direction: column;
+        background: none;
+        width: 100%;
+    }
+    .loginHeader{
+        background: none;
+        width: 210%;
+        justify-content: center;
+        margin-top; 40px;
+        margin-left: -20px;
+    }
+    .loginHeader h3{
+        display: flex;
+        justify-content: center;
+    }
+    .loginHeader p{
+        font-size: 21px;
+        margin-left: 25px;
+    }
+   
+    #register .formLI{
+        width: 100%;
+        margin-top: 10px;
+        padding: 0;
+        justify-content: center;
+    }
+    #register input{
+        width: 100%;
+        box-sizing: border-box;
+        margin-right: 10px;
+    }
+    .addAside{
+        background: none;
+        width: 50%;
+    }
+    .firstArticle{
+        margin-top: -550px;
+    }
+    .firstArticle img{
+        width: 280px;
+    }  
+    .headerOfArticles h2{
+        font-size: 27px;
+    }
+    .textOnArticle{
+        font-size: 22px;
+        width: 110px;
+    }
+     .textOnArticle span{
+        margin-left: 20px;
+    }
+    
+    
+    .bandHeader h1{
+        font-size: 40px;
+    }
+    
+    
+    #musicSct{
+        height: 800px;
+    }
+    .bandHeader h1{
+        font-size: 40px;
+        padding-top: 50px;
+    }
+    .musics{
+        margin-top: 10%;
+    }
+    .musics h2{
+        font-size: 24px; 
+    }
+    .musics h3{
+        font-size: 17px; 
+    }
+    
+    .musicHeader h1{
+        font-size: 40px;
+    }
+    
+    
+    .albumsMusicPage .figc{
+        font-size: 20px;
+    }
+    .albumsMusicPage .btnMusicContent{
+        font-size: 15px;
+    }
+    #history{
+        padding-top: 2%;
+    }
+    .mainContent{
+        width: 80%;
+    }
+    .hist-header-txt h1{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 389px) and (min-width: 150px){
+     .scrollTopBtn{
+       margin-left: -25px;
+    }
+    /*.scrollTopBtn:hover::before{
+        content: 'Back To Top';
+        font-size: 22px;
+        font-family: 'Kurale', serif;
+        color: #FFFFFF;
+        background: #000000;
+        border-radius: 20%;
+        font-weight: 600;
+        position: absolute;
+        top: 110%;
+        left: -80%;
+        width: 120px;
+    }
+    .scrollTopBtn span{
+        left: 23%;
+        top: -5%;
+        font-size: 45px;
+    }*/
+    .hamburger{
+        display: block;
+    }
+    .logo img{
+        position: absolute;
+        top: 0px;
+        left: 2%;
+        width: 140px;
+    }
+    #mainHeader{
+        height: 50px;
+        border-bottom: 1px solid  #4d4d4d;
+        transition: .3s linear;
+        opacity: .9;
+    }
+    .column{
+        display: none;
+    }
+    #mainHeader.nav-open{
+        height: 100vh;
+        background-color: rgba(0,0,0,.9);
+        transition: .3s linear;
+        overflow-y: visible;
+    }
+    .nav-open .column{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30%;
+    }
+    .nav-open .logo img{
+       position: absolute;
+        top: 0px;
+        left: 2%;
+        width: 140px;
+        opacity: 0.2;
+        pointer-events: none;
+    }
+    .nav-open .top-menu{
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .nav-open .top-menu li{
+        padding-top: 25px;
+    }
+    .nav-open .top-menu a{
+        /*display: block;*/
+    }
+    .nav-open .supp{
+        margin-top: 55%;
+    }
+    .slider{
+        height: 390px;
+        background-position: bottom;
+        background-size:cover;
+        background-repeat: repeat;
+    }
+    .header-txt h2{
+        font-size: 40px;
+    }
+    .container-band{
+       height: 1020px;
+    }
+    .photos-buttons-container{
+        display: flex;
+        flex-direction: column;
+        margin-top: -30px;
+    }
+    .photos-buttons-container .content{
+        display: flex;
+        justify-content: center;
+    }
+    .photos-buttons-container .content img{
+        width: 250px;
+        height: 250px;
+        margin-left: -15px;
+    }
+    .photos-buttons-container .animate1{
+        margin-top: 30px;
+    }
+    .photos-buttons-container .content figcaption{
+        font-size: 19px;
+    }
+    .photos-buttons-container .content .text{
+        font-size: 18px;
+    }
+    .moreInfoBtn{
+        font-size: 21px;
+        justify-content: center;
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+    .main-music-container{
+        height: 1400px;
+    }
+    .main-music-container .albums{
+        display: flex;
+        margin: 0;
+        max-width: 100%;
+        flex-wrap: wrap;
+        margin-top: -20px;
+        margin-left: 25px;
+    }
+    .main-music-container .expand img{
+        width: 230px;
+        height: 230px;
+        margin-right: 40px;
+        margin-top: 50px;
+    }
+    .main-music-container .expand figcaption{
+        font-size: 20px;
+        margin-top: -50px;
+    }
+    .main-music-container .expand .txtMusicButtons{
+        font-size: 14px;
+        margin-top: 50px;
+        margin-left: -38px;
+    }
+    .moreMusicBtn .expandMeBtn{
+        font-size: 21px;
+    }
+    .moreMusicBtn .expandMeBtn span{
+        font-size: 19px;
+    }
+    .parallax{
+        height: 520px;
+        background-position: center;
+    }
+    .header-music-txt h2{
+        font-size: 40px;
+    }
+     .parallaxTwo{
+        height: 520px;
+    }
+    .footer-name p{
+        font-size: 15px;
+    }
+    .footer-socials-icons li a{
+        font-size: 25px;
+    }
+    
+    
+    
+    .news-container{
+        height: 1300px;
+        width: 100%;
+    }
+    #inline{
+        flex-direction: column-reverse;
+        margin-left: 0;
+        width: 100%;
+        background: url(../obrazy/gt.PNG);
+        margin-top: 0;
+        padding-top: 70px;
+    }
+    .newsForm{
+        flex-direction: column;
+        background: none;
+        width: 210%;
+    }
+    .loginHeader{
+        background: none;
+        width: 210%;
+        justify-content: center;
+        margin-top; 40px;
+        margin-left: -20px;
+    }
+    .loginHeader h3{
+        display: flex;
+        justify-content: center;
+    }
+    .loginHeader p{
+        font-size: 21px;
+        margin-left: 25px;
+    }
+    #register{
+        width: 100%;
+        margin: 0 auto;
+    }
+    #register .formLI{
+        width: 100%;
+        margin-top: 10px;
+        padding: 0;
+        justify-content: center;
+    }
+    #register input{
+        width: 100%;
+        box-sizing: border-box;
+        margin-right: 10px;
+    }
+    .addAside{
+        background: none;
+        width: 90%;
+    }
+    .firstArticle{
+        margin-top: -550px;
+        margin-left: 0;
+    }
+    .firstArticle img{
+        width: 250px;
+    }  
+    .headerOfArticles h2{
+        font-size: 25px;
+    }
+    .textOnArticle{
+        font-size: 22px;
+        width: 110px;
+    }
+     .textOnArticle span{
+        margin-left: 20px;
+    }
+    
+    
+    .bandHeader h1{
+        font-size: 40px;
+    }
+    
+    
+    #musicSct{
+        height: 810px;
+    }
+    .bandHeader h1{
+        font-size: 40px;
+        padding-top: 90px;
+    }
+    .musics{
+        margin-top: 10%;
+    }
+    .musics h2{
+        font-size: 24px; 
+    }
+    .musics h3{
+        font-size: 17px; 
+    }
+    
+    .musicHeader h1{
+        font-size: 40px;
+    }
+    
+    
+    .albumsMusicPage .figc{
+        font-size: 20px;
+    }
+    .albumsMusicPage .btnMusicContent{
+        font-size: 15px;
+    }
+    .albumsMusicPage .album10 figcaption{
+        font-size: 21px;
+    }
+    
+    
+    #history{
+        padding-top: 2%;
+    }
+    .mainContent{
+        width: 80%;
+    }
+    .hist-header-txt h1{
+        font-size: 40px;
+    }
+}
+
+
+
+    

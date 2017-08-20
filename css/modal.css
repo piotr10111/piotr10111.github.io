@@ -1,0 +1,216 @@
+.modal{
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    
+    transition: 0.4s linear;
+}
+.modal-close-btn {
+    z-index: 1001;
+    width: 40px;
+    height: 35px;
+    border: 0;
+    border-top: 5px solid #cc8500;
+    background: transparent;
+    position: relative;
+    top: -660px;
+    left: 730px;
+    transform: rotate(45deg) translateY(5px);
+    cursor: pointer;
+}
+.modal-close-btn::before, .modal-close-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 5px solid #cc8500;
+    transform: rotate(-90deg) translateX(4px);
+}
+#modalWrpr{
+    border: 3px solid #ffb31a;
+    color: #FFFFFF;
+    background-color: #000000;
+}
+.articleModal h2{
+    font-size: 54px; 
+    font-weight: 500;
+    color: #cc8500;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.txtModal{
+    margin-top: 20px;
+    padding: 40px;
+}
+.txtModal h3{
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.txtModal p{
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.footerModal a{
+      font-size: 15px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding: 0 20px 20px 0;
+}
+
+@media(min-width: 800px) and (max-width: 1023px){
+    #modalWrpr{
+        width: 710px;
+        margin-left: 33px;
+    }
+    .modal-close-btn{
+        left: 87%;
+    }
+}
+
+@media(min-width: 590px) and (max-width: 799px){
+    #modalWrpr{
+        width: 510px;
+        height: 650px;
+        margin-left: 33px;
+        margin-top: -200px;
+    }
+    .modal-close-btn{
+        left: 4%;
+        top: 300%;
+        z-index: 1001;
+        cursor: pointer;
+        transform: none;
+        background: none;
+        width: 0;
+        height: 0;
+        border: none;
+    }
+    .modal-close-btn::before, .modal-close-btn::after {
+        content: 'Close';
+        font-size: 20px;
+        color: #FFFFFF;
+        width: 100%;
+        transform: none;
+        border: 2px solid #ffb31a;
+        background: #ffb31a;
+        width: 50px;
+        padding: 5px;
+        margin-top: -14px;
+    }
+    .txtModal p{
+        font-size: 18px;
+        
+    }
+    .txtModal h3{
+        font-size: 18px;
+    }
+    .articleModal h2{
+        font-size: 44px; 
+    }
+    #modalWrpr footer{
+        margin-top: -60px;
+    }
+}
+@media (max-width: 589px) and (min-width: 390px){
+    #modalWrpr{
+        width: 310px;
+        height: 780px;
+        margin-left: 33px;
+        margin-top: -300px;
+    }
+    .modal-close-btn{
+        left: 4%;
+        top: 300%;
+        z-index: 1001;
+        cursor: pointer;
+        transform: none;
+        background: none;
+        width: 0;
+        height: 0;
+        border: none;
+    }
+    .modal-close-btn::before, .modal-close-btn::after {
+        content: 'Close';
+        font-size: 20px;
+        color: #FFFFFF;
+        width: 100%;
+        transform: none;
+        border: 2px solid #ffb31a;
+        background: #ffb31a;
+        width: 50px;
+        padding: 5px;
+        margin-top: -14px;
+    }
+    .txtModal p{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .txtModal h3{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .articleModal h2{
+        font-size: 30px; 
+    }
+    #modalWrpr footer{
+        margin-top: -60px;
+    }
+}
+
+@media (max-width: 389px) and (min-width: 150px){
+    #modalWrpr{
+        width: 300px;
+        height: 780px;
+        margin-left: 33px;
+        margin-top: -300px;
+    }
+    .modal-close-btn{
+        left: 4%;
+        top: 300%;
+        z-index: 1001;
+        cursor: pointer;
+        transform: none;
+        background: none;
+        width: 0;
+        height: 0;
+        border: none;
+    }
+    .modal-close-btn::before, .modal-close-btn::after {
+        content: 'Close';
+        font-size: 20px;
+        color: #FFFFFF;
+        width: 100%;
+        transform: none;
+        border: 2px solid #ffb31a;
+        background: #ffb31a;
+        width: 50px;
+        padding: 5px;
+        margin-top: -14px;
+    }
+    .txtModal p{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .txtModal h3{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .articleModal h2{
+        font-size: 30px; 
+    }
+    #modalWrpr footer{
+        margin-top: -60px;
+    }
+}
